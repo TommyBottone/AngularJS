@@ -9,6 +9,8 @@ Stub a function called historyBufferChanged() which will get called every time t
 * Fork this repository (please use SSH git URL, not HTTP)
 * Build each of the four functions of the calculator in a separate feature branch 
 * Build stub functions in a separate feature branch
+* Include a screenshot of "git remote -v" and "git status" in your final commit.
 * Submit a pull request to this project when done
+
 
 ## Good luck. 
