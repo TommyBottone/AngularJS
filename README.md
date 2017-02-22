@@ -11,4 +11,4 @@ Stub a function called historyBufferChanged() which will get called every time t
 * Build stub functions in a separate feature branch
 * Submit a pull request to this project when done
 
-Good luck. 
+## Good luck. 
