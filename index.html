@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="history.service.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="Calculator">
+    <div ng-controller="CalculatorController">
+       <div id="header" class="center"> 
+        {{title}}
+      </div>
+      <div class="center">
+        <div id="operation">
+          <span ng-repeat="val in operation track by $index">{{val}}</span>
+        </div>
+        <table id="calculatorTable">
+          <tr>
+            <th colspan="4" ng-module="curNumber">{{curNumber}}</th>
+          </tr>
+          <tr>
+            <td colspan="2" ng-click="clear()">Clear</td>
+            <td colspan="2" ng-click="delete()">del</td>
+          </tr>
+          <tr>
+            <td ng-repeat="val in [1, 2, 3]" ng-click="numClick(val)">{{val}}</td>
+            <td ng-click="addOper('+')">+</td>
+          </tr>
+          <tr>
+            <td ng-repeat="val in [4, 5, 6]" ng-click="numClick(val)">{{val}}</td>
+            <td ng-click="subOper('-')">-</td>
+          </tr>
+          <tr>
+            <td ng-repeat="val in [7, 8, 9]" ng-click="numClick(val)">{{val}}</td>
+            <td ng-click="mulOper('*')">*</td>
+          </tr>
+          <tr>
+            <td ng-repeat="val in ['.', '0']" ng-click="numClick(val)">{{val}}</td>
+            <td ng-click="saveToHistory()">=</td>
+            <td ng-click="divOper('/')">/</td>
+          </tr>
+        </table>
+        <table id="historyTable">
+          <th>
+            HISTORY
+          </th>
+          <tr ng-repeat="val in history track by $index">
+            <td ng-dblclick="setOperation($index)">
+              <span class="history" ng-repeat="val in val.operation track by $index">{{val}}</span> = {{val.value}}</td>
+          </tr>
+        </table>
+      </div>
+
+   </div>
+  </body>
+</html>
