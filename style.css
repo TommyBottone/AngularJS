@@ -1,0 +1,46 @@
+#header{
+  font-weight:bold;
+  font-size:20px;
+  margin:auto;
+  width:50%;
+  padding:10px;
+}
+#calculatorTable{
+  margin:auto;
+  width:50%;
+  padding:20px;
+  display:inline;
+}
+#calculatorTable tr td{
+  border: 1px solid #000;
+  height:30px;
+  width:30px;
+}
+#calculatorTable th{
+  border: 1px solid #000;
+  text-align:right;
+}
+#calculatorTable td:hover{
+  border: 1px solid #000;
+  background-color:#CCC;
+  font-weight:bold;
+  cursor:pointer;
+}
+#historyTable{
+  margin:auto;
+  width:50%;
+  display:inline;
+}
+#historyTable th{
+  border: 1px solid #000;
+  text-align:right;
+}
+#operation{
+  height:20px;
+}
+.history{
+  cursor:pointer;
+}
+.center{
+  text-align:center;
+}
