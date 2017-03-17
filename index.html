@@ -7,16 +7,17 @@
     <script src="history.service.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-app="Calculator">
-    <div ng-controller="CalculatorController">
-       <div id="header" class="center"> 
+  <body  ng-app="Calculator" ng-controller="CalculatorController">
+    <div>
+      <div id="pegasus"></div>
+      <div id="header" class="center"> 
         {{title}}
       </div>
-      <div class="center">
+      <div id="tables">
         <div id="operation">
           <span ng-repeat="val in operation track by $index">{{val}}</span>
         </div>
-        <table id="calculatorTable">
+        <table  class="center" id="calculatorTable">
           <tr>
             <th colspan="4" ng-module="curNumber">{{curNumber}}</th>
           </tr>
@@ -47,12 +48,11 @@
             HISTORY
           </th>
           <tr ng-repeat="val in history track by $index">
-            <td ng-dblclick="setOperation($index)">
-              <span class="history" ng-repeat="val in val.operation track by $index">{{val}}</span> = {{val.value}}</td>
+            <td ng-dblclick="setOperation($index)"  class="history">
+              <span ng-repeat="val in val.operation track by $index">{{val}}</span> = {{val.value}}</td>
           </tr>
         </table>
       </div>
-
    </div>
   </body>
 </html>
